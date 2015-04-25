@@ -8,5 +8,5 @@ namespace CheBay.Data
 {
     public class Class1
     {
-    }
+    }  
 }
