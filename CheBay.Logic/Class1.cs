@@ -8,5 +8,5 @@ namespace CheBay.Logic
 {
     public class Class1
     {
-    }
+    } 
 }
