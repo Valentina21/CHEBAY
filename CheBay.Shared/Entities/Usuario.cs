@@ -15,5 +15,6 @@ namespace CheBay.Shared.Entities
         public string contrasena { get; set; }
         public float reputacion { get; set; }
         public int Id { get; set; }
+        public List<Comentario> comments { get; set; }
     }
 }
