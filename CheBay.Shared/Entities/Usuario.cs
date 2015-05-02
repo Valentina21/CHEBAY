@@ -19,7 +19,8 @@ namespace CheBay.Shared.Entities
         public string mail { get; set; }
         public string imagen { get; set; }
         [Required]
-        public string contrasena { get; set; }       
-        public float reputacion { get; set; }      
+        public string contrasena { get; set; }
+        public float reputacion { get; set; }
+        public int Id { get; set; }
     }
 }
