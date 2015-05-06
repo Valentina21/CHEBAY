@@ -13,6 +13,7 @@ namespace CheBay.Shared.Entities
         public string mail { get; set; }
         public string imagen { get; set; }
         public string contrasena { get; set; }
+        public string geo { get; set; }
         public float reputacion { get; set; }
         public int Id { get; set; }
     }

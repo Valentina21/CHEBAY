@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheBay.Logic", "CheBay.Logi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheBay.Data", "CheBay.Data\CheBay.Data.csproj", "{40D60360-F3CE-4282-A9B9-05C0687C4910}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheBay.Console", "CheBay.Console\CheBay.Console.csproj", "{10C38630-2C39-4B2B-91B9-E2E538FF4C3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{40D60360-F3CE-4282-A9B9-05C0687C4910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40D60360-F3CE-4282-A9B9-05C0687C4910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40D60360-F3CE-4282-A9B9-05C0687C4910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10C38630-2C39-4B2B-91B9-E2E538FF4C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10C38630-2C39-4B2B-91B9-E2E538FF4C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10C38630-2C39-4B2B-91B9-E2E538FF4C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10C38630-2C39-4B2B-91B9-E2E538FF4C3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

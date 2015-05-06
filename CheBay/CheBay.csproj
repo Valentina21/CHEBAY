@@ -16,10 +16,10 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressSSLPort>44301</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -111,6 +111,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\Controllers\AttributesController.cs" />
+    <Compile Include="Areas\Administration\Controllers\CategoriesController.cs" />
+    <Compile Include="Areas\Administration\Controllers\InfoController.cs" />
+    <Compile Include="Areas\Administration\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\Administration\Controllers\ReportsController.cs" />
+    <Compile Include="Areas\Shop\Controllers\BuyController.cs" />
+    <Compile Include="Areas\Shop\Controllers\CompareController.cs" />
+    <Compile Include="Areas\Shop\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\Shop\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Shop\Controllers\RegisterController.cs" />
+    <Compile Include="Areas\Shop\Controllers\SearchController.cs" />
+    <Compile Include="Areas\Shop\ShopAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -120,12 +133,31 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\azul.css" />
+    <Content Include="Content\verde.css" />
+    <Content Include="Content\amarillo.css" />
+    <Content Include="Content\rojo.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Administration\Views\web.config" />
+    <Content Include="Areas\Shop\Views\web.config" />
+    <Content Include="Areas\Shop\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Shop\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Shop\Views\Products\Products.cshtml" />
+    <Content Include="Areas\Shop\Views\Buy\Buy.cshtml" />
+    <Content Include="Areas\Shop\Views\Profile\Profile.cshtml" />
+    <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Administration\Views\Products\Products.cshtml" />
+    <Content Include="Areas\Administration\Views\Categories\Categories.cshtml" />
+    <Content Include="Areas\Administration\Views\Attributes\Attributes.cshtml" />
+    <Content Include="Areas\Administration\Views\Reports\Reports.cshtml" />
+    <Content Include="Areas\Administration\Views\Info\Info.cshtml" />
+    <Content Include="Areas\Shop\Views\Compare\Compare.cshtml" />
     <None Include="Properties\PublishProfiles\Chebay15.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -157,6 +189,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administration\Models\" />
+    <Folder Include="Areas\Shop\Models\" />
+    <Folder Include="Areas\Shop\Views\Register\" />
+    <Folder Include="Areas\Shop\Views\Search\" />
+    <Folder Include="Imgs\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
