@@ -123,8 +123,11 @@
     <Compile Include="Areas\Shop\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Shop\Controllers\RegisterController.cs" />
     <Compile Include="Areas\Shop\Controllers\SearchController.cs" />
+    <Compile Include="Areas\Shop\Models\PayPalModel.cs" />
     <Compile Include="Areas\Shop\ShopAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Areas\Shop\Controllers\PayPalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,11 +193,13 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\Models\" />
-    <Folder Include="Areas\Shop\Models\" />
+    <Folder Include="Areas\Shop\Views\PayPalModel\" />
     <Folder Include="Areas\Shop\Views\Register\" />
     <Folder Include="Areas\Shop\Views\Search\" />
     <Folder Include="Imgs\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Views\PayPal\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

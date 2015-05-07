@@ -6,16 +6,12 @@ using System.Web.Mvc;
 
 namespace CheBay.Controllers
 {
-     public class HomeController : Controller
+    public class AccountController : Controller
     {
-        // GET: /Home/
-        public ActionResult Index(int idTienda)
+        // GET: Account
+        public ActionResult Index()
         {
-            Session["idTienda"] = idTienda;
             return View();
         }
-	}
- }
-
-
-
+    }
+}
