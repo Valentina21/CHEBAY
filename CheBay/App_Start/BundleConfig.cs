@@ -26,6 +26,13 @@ namespace CheBay
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+            //agregado para el uso de bootstrap - NACHO
+            bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
+                                    "~/Scripts/knockout-{version}.js"));
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/bootstrap.css"));
+
         }
     }
 }

@@ -12,7 +12,7 @@ namespace CheBay.Console
         static void Main(string[] args)
         {
             Tienda t = new Tienda();
-            t.nombre = "Ebay";
+            t.nombre = "Ebay"; 
             t.slogan = "El mejor local de ventas";
             t.tema = "azul";
             t.basededatos = "Ebay";
