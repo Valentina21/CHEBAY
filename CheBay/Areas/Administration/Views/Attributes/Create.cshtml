@@ -1,0 +1,43 @@
+﻿@model CheBay.Areas.Administration.Models.AtributoModel
+@{
+    ViewBag.Title = "Insertar Atributo";
+}
+<style>
+    .container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left {
+        float: left;
+        width: 150px;
+    }
+</style>
+@using (Html.BeginForm("Create", "Attribute", FormMethod.Post))
+{
+    <div>
+        <table width="20%" cellpadding="5" cellspacing="5" border="1" style="border: 1 solid black;
+            border-collapse: collapse;">
+            <tr>
+                <td align="right">
+                    Titulo :
+                </td>
+                <td align="left">
+                    @Html.TextBoxFor(m => m.atributo.titulo)
+            </td>
+        </tr>
+       
+
+<tr>
+    <td colspan="2" align="center">
+        <input type="submit" value="Guardar" />
+        <a href="/Attributes/index/">Cancelar</a>
+
+        <div style="color: Red">@ViewBag.Message</div>
+    </td>
+</tr>
+</table>
+</div>
+
+}
+

@@ -13,5 +13,35 @@ namespace CheBay.Logic
         {
             Data.DataLayer.AddTienda(tienda);
         }
+
+        #region Atributos
+
+        public static List<Atributo> GetAtributos()
+        {
+            return Data.DataLayer.GetAtributos();
+        }
+
+        public static void DeleteAtributo(int id)
+        {
+            Data.DataLayer.DeleteAtributo(id);
+        }
+
+        public static void UpdateEmployee(Atributo atr)
+        {
+            Data.DataLayer.UpdateAtributo(atr);
+        }
+
+        public static Atributo GetAtributo(int id)
+        {
+            return Data.DataLayer.GetAtributo(id);
+        }
+
+        public static void AddAtributo(Atributo atr)
+        {
+            Data.DataLayer.AddAtributo(atr);
+        }
+
+        #endregion
+
     } 
 }

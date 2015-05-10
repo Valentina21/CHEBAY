@@ -113,6 +113,7 @@
     <Compile Include="Areas\Administration\Controllers\InfoController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\ReportsController.cs" />
+    <Compile Include="Areas\Administration\Models\AtributoModel.cs" />
     <Compile Include="Areas\Shop\Controllers\BuyController.cs" />
     <Compile Include="Areas\Shop\Controllers\CompareController.cs" />
     <Compile Include="Areas\Shop\Controllers\ProductsController.cs" />
@@ -154,6 +155,8 @@
     <Content Include="Areas\Administration\Views\Reports\Reports.cshtml" />
     <Content Include="Areas\Administration\Views\Info\Info.cshtml" />
     <Content Include="Areas\Shop\Views\Compare\Compare.cshtml" />
+    <Content Include="Areas\Administration\Views\Attributes\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Attributes\Create.cshtml" />
     <None Include="Properties\PublishProfiles\Chebay15.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -185,7 +188,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administration\Models\" />
     <Folder Include="Areas\Shop\Models\" />
     <Folder Include="Areas\Shop\Views\Register\" />
     <Folder Include="Areas\Shop\Views\Search\" />
@@ -201,6 +203,16 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CheBay.Logic\CheBay.Logic.csproj">
+      <Project>{71742fab-264c-4a43-aecc-000c95f22efb}</Project>
+      <Name>CheBay.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CheBay.Shared\CheBay.Shared.csproj">
+      <Project>{6f36773d-5bba-48f2-b25d-2d07e25f0cd6}</Project>
+      <Name>CheBay.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
