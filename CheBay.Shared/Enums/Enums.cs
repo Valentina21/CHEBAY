@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheBay.Logic
+namespace CheBay.Shared.Enums
 {
-    public class Class1
-    {
-    } 
+    public enum LogsTypes { Warning, Error, Information };
 }

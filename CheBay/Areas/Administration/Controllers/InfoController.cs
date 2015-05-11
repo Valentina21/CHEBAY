@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace CheBay.Controllers
+namespace CheBay.Areas.Administration.Controllers
 {
-    public class AccountController : Controller
+    public class InfoController : Controller
     {
-        // GET: Account
+        // GET: Administration/Info
         public ActionResult Index()
         {
             return View();
