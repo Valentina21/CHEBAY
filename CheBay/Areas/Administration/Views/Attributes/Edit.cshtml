@@ -1,6 +1,6 @@
 ﻿@model CheBay.Areas.Administration.Models.AtributoModel
 @{
-    ViewBag.Title = "Insertar Atributo";
+    ViewBag.Title = "Editar Atributo";
 }
 <style>
     .container {
@@ -13,7 +13,7 @@
         width: 150px;
     }
 </style>
-@using (Html.BeginForm("Create", "Attributes", FormMethod.Post))
+@using (Html.BeginForm("Delete", "Attributes", FormMethod.Post))
 {
     <div>
         <table width="20%" cellpadding="5" cellspacing="5" border="1" style="border: 1 solid black;
@@ -24,20 +24,22 @@
                 </td>
                 <td align="left">
                     @Html.TextBoxFor(m => m.atributo.titulo)
-            </td>
-        </tr>
-           
+                </td>
+            </tr>
 
-<tr>
-    <td colspan="2" align="center">
-        <input type="submit" value="Guardar" />
-        <a href="/Attributes/index/">Cancelar</a>
 
-        <div style="color: Red">@ViewBag.Message</div>
-    </td>
-</tr>
-</table>
-</div>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Eliminar" />
+                    <a href="/Attributes/index/">Cancelar</a>
+
+                    <div style="color: Red">@ViewBag.Message</div>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 }
+
+
 

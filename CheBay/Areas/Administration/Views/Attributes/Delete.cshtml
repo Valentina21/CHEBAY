@@ -1,0 +1,45 @@
+﻿@model CheBay.Areas.Administration.Models.AtributoModel
+@{
+    ViewBag.Title = "Eliminar Atributo";
+}
+<style>
+    .container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left {
+        float: left;
+        width: 150px;
+    }
+</style>
+@using (Html.BeginForm("Delete", "Attributes", FormMethod.Post))
+{
+    <div>
+        <table width="20%" cellpadding="5" cellspacing="5" border="1" style="border: 1 solid black;
+            border-collapse: collapse;">
+            <tr>
+                <td align="right">
+                    Titulo :
+                </td>
+                <td align="left">
+                    @Html.DisplayFor(m => m.atributo.titulo)
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Eliminar" />
+                    <a href="/Attributes/index/">Cancelar</a>
+
+                    <div style="color: Red">@ViewBag.Message</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+}
+
+
+

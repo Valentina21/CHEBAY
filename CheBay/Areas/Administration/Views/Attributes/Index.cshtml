@@ -19,19 +19,18 @@
 @using (@Html.BeginForm("Index", "Home"))
 {
     var grid = new WebGrid(Model.atributoListCollction, canSort: false);
-
     <div>
         @grid.GetHtml(columns:
             grid.Columns
             (
                 grid.Column("id", "ID"),
-                grid.Column("titulo", "Titulo")
-                 ), mode: WebGridPagerModes.Numeric)
+                grid.Column("titulo", "Titulo"),
+                grid.Column("", null, format: @<a href="@Url.Action("/Edit/" + @item.id)">Editar</a>),
+                grid.Column("", null, format: @<a href="@Url.Action("/Delete/" + @item.id)">Eliminar</a>)
+            ), mode: WebGridPagerModes.Numeric)
     </div>
     <div>
         <a href="@Url.Action(ViewContext.RouteData.Values["shop"].ToString(), "Attributes/Create")">Nuevo Atributo</a>
     </div>
-
-
 }
 

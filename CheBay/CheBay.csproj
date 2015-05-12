@@ -157,6 +157,8 @@
     <Content Include="Areas\Shop\Views\Compare\Compare.cshtml" />
     <Content Include="Areas\Administration\Views\Attributes\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Attributes\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\Attributes\Delete.cshtml" />
+    <Content Include="Areas\Administration\Views\Attributes\Edit.cshtml" />
     <None Include="Properties\PublishProfiles\Chebay15.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

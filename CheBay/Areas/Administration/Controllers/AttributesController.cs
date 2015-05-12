@@ -37,7 +37,6 @@ namespace CheBay.Areas.Administration.Controllers
                 Logic.LogicLayer.AddAtributo(_obj);
                 atributomodel.atributoListCollction = Logic.LogicLayer.GetAtributos();
                 atributomodel.atributo = new Atributo();
-           //  ControllerContext.RouteData.Values["action"].ToString();
                 ViewBag.Message = "Atributo cargado correctamente.";
             }
             catch
@@ -46,6 +45,57 @@ namespace CheBay.Areas.Administration.Controllers
             }
             return View(atributomodel);
         }
+
+
+        public ActionResult Delete()
+        {
+            int attrId = int.Parse(RouteData.Values["id"].ToString());
+            Atributo _atributo = Logic.LogicLayer.GetAtributo(attrId);
+            AtributoModel atributomodel = new AtributoModel();
+            atributomodel.atributo = _atributo;
+            return View(atributomodel);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(string Id = "")
+        {
+            try
+            {
+                Logic.LogicLayer.DeleteAtributo(int.Parse(Id));
+                ViewBag.Message = "Atributo eliminado correctamente.";
+            }
+            catch
+            {
+                ViewBag.Message = "Error al eliminar atributo.";
+            }
+            return  RedirectToAction("/Index/");
+        }
+
+
+        public ActionResult Edit()
+        {
+            int attrId = int.Parse(RouteData.Values["id"].ToString());
+            Atributo _atributo = Logic.LogicLayer.GetAtributo(attrId);
+            AtributoModel atributomodel = new AtributoModel();
+            atributomodel.atributo = _atributo;
+            return View(atributomodel);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(AtributoModel attModel, string Id = "")
+        {
+            try
+            {
+               Atributo attr = Logic.LogicLayer.GetAtributo(int.Parse(Id));
+               attr.titulo = attModel.atributo.titulo;
+               Logic.LogicLayer.UpdateAtributo(attr);
+            }
+            catch
+            {
+                ViewBag.Message = "Error al eliminar atributo.";
+            }
+            return RedirectToAction("/Index/");
+        }        
 
     }
 }
