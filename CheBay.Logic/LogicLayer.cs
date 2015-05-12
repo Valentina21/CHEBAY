@@ -26,7 +26,7 @@ namespace CheBay.Logic
             Data.DataLayer.DeleteAtributo(id);
         }
 
-        public static void UpdateEmployee(Atributo atr)
+        public static void UpdateAtributo(Atributo atr)
         {
             Data.DataLayer.UpdateAtributo(atr);
         }
