@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Atributo.cs" />
+    <Compile Include="Entities\AtributoValor.cs" />
     <Compile Include="Entities\Categoria.cs" />
     <Compile Include="Entities\Chat.cs" />
     <Compile Include="Entities\Comentario.cs" />

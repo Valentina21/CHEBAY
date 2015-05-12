@@ -11,7 +11,7 @@ namespace CheBay.Shared.Entities
 {
     public class Tienda
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key]
         public int Id { get; set; }
         [Required]
         public string nombre { get; set; }
@@ -23,12 +23,22 @@ namespace CheBay.Shared.Entities
         public string tema { get; set; }
         [Required]
         public string basededatos { get; set; }
+
+       
     }
 
 
     public class InheritanceMappingContext : DbContext
     {
         public DbSet<Tienda> Tiendas { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Imagen> Imagenes { get; set; }
+        public DbSet<AtributoValor> AtributosValores { get; set; }
+        public DbSet<Atributo> Atributos { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Subasta> Subastas { get; set; }
+        public DbSet<Comentario> Comentarios { get; set; }
     }
 
 

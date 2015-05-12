@@ -9,16 +9,14 @@ using System.Threading.Tasks;
 
 namespace CheBay.Shared.Entities
 {
-    public class Comentario
+    public class AtributoValor
     {
         [Key]
         public int id { get; set; }
-          [Required]
-        public Usuario usuario { get; set; }
-         [Required]
-        public Producto producto { get; set; }
-         [Required]
-        public string texto { get; set; }
+        [Required]
+        public string valor { get; set; }
+        [Required]
+        public Atributo atributo { get; set; }
     }
 
    
