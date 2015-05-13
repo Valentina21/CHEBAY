@@ -1,0 +1,81 @@
+﻿@model CheBay.Areas.Administration.Models.ProductModel
+@{
+    ViewBag.Title = "Insertar Producto";
+}
+<style>
+    .container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left {
+        float: left;
+        width: 150px;
+    }
+</style>
+@using (Html.BeginForm("Create", "Products", FormMethod.Post))
+{
+    <div>
+        <table width="20%" cellpadding="5" cellspacing="5" border="1" style="border: 1 solid black;
+            border-collapse: collapse;">
+            <tr>
+                <td align="right">
+                    Nombre :
+                </td>
+                <td align="left">
+                   @Html.TextBoxFor(m => m.producto.nombre)
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Descripcion :
+                </td>
+                <td align="left">
+                    @Html.TextAreaFor(m => m.producto.descripcion)
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Fecha cierre :
+                </td>
+                <td align="left">
+                    @Html.TextBoxFor(m => m.producto.fechacierre)
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Precio base :
+                </td>
+                <td align="left">
+                    @Html.TextBoxFor(m => m.producto.preciobase)
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Compra directa :
+                </td>
+                <td align="left">
+                    @Html.TextBoxFor(m => m.producto.preciocomdirecta)
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Categoria :
+                </td>
+                <td align="left">
+                    @Html.DropDownListFor(model => model.producto.categoria, Model.categoriaListCollction, "--Select Product--")
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Guardar" />
+                    <a href="/Products/index/">Cancelar</a>
+                    <a href="/Attributes/index/">Cancelar</a>
+                    <div style="color: Red">@ViewBag.Message</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+}
+

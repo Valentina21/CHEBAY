@@ -18,6 +18,11 @@ namespace CheBay.Shared.Entities
         [Required]
         public Tienda tienda { get; set; }
         public List<Atributo> atributos { get; set; }
+
+        public Categoria()
+        {
+            this.atributos = new List<Atributo>();
+        }
     }
 
    

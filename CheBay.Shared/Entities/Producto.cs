@@ -33,7 +33,9 @@ namespace CheBay.Shared.Entities
          public Categoria categoria { get; set; }
          [Required]
          public List<AtributoValor> atributosvalores { get; set; }
-
+         public int? idusuario { get; set; }
+         [ForeignKey("idusuario")]
+         public Usuario usuario { get; set; }
          public List<Imagen> imagenes { get; set; }
         }
 
